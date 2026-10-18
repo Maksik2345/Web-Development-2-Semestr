@@ -1,3 +1,15 @@
 .outletWrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
   min-height: 100vh;
+
+  &__body {
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    gap: 24px;
+  }
+
+  &__content {
+    min-width: 0;
+  }
 }
