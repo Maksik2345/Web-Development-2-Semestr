@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 2px solid #D9D9D9;
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__accountBlock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__text {
+    &_role {
+      @include text_input();
+      color: var(--black-3-color);
+    }
+  }
+
+  &__list {
+    position: absolute;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background-color: #fff;
+    top: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    &_item {
+      @include text_input();
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--ultra-light-grey-color);
+      }
+
+      &_exit {
+        color: var(--red-color);
+      }
+    }
+  }
+}

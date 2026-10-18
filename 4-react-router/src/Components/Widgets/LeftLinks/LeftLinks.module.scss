@@ -1,0 +1,26 @@
+.container {
+  height: 100%;
+  flex: 20%;
+
+  &__links {
+    padding: 16px 0;
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    padding: 12px 20px;
+    @include text_subtitle();
+    color: var(--black-3-color);
+
+    &:hover {
+      color: var(--blue-color);
+    }
+
+    &_active {
+      color: var(--blue-color);
+    }
+  }
+}

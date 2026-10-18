@@ -1,0 +1,21 @@
+@mixin text_title {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+@mixin text_subtitle {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@mixin text_table_title {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--grey-2-color);
+}
+
+@mixin text_description {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--grey-2-color);
+}
