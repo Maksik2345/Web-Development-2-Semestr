@@ -1,4 +1,5 @@
 import { JSX, memo } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Styles.module.scss';
 
 function NotFoundPageComponent(): JSX.Element {
@@ -6,7 +7,7 @@ function NotFoundPageComponent(): JSX.Element {
     <div className={styles.container}>
       <h2>404 Error</h2>
       <p>Oops! The page you're looking for does not exist.</p>
-      <div>Go Home</div>
+      <Link to="/">Go Home</Link>
     </div>
   );
 }
