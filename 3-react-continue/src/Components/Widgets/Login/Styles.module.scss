@@ -1,3 +1,30 @@
 .login {
-  
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__input {
+    padding: 10px 12px;
+    border: 1px solid var(--border-grey-color);
+    border-radius: 8px;
+    font-size: 14px;
+
+    &:focus {
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__button {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
 }

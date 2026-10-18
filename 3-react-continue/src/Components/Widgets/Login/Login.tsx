@@ -1,17 +1,39 @@
-import { JSX, memo } from 'react';
-import cn from 'classnames';
+import { JSX, memo, useState } from 'react';
+import { Card } from '@/Components/Layouts/Card';
 import styles from './Styles.module.scss';
 
 function LoginComponent(): JSX.Element {
-  /* Для создания события onChange у input используйте следующую конструкцию:
-    <input onChange={e => setValue(e.target.value)} />
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
 
-    setValue - функция из useState
-  */
-  /* Для очистки значений используйте пример из лекции на 23 слайде: 
-    onClickButton функцию надо наполнить своим содержимым
-  */
-  return <div className={styles.login}></div>;
+  const onClickButton = () => {
+    setLogin('');
+    setPassword('');
+  };
+
+  return (
+    <Card title="Вход в систему">
+      <div className={styles.login}>
+        <input
+          className={styles.login__input}
+          type="text"
+          placeholder="Логин"
+          value={login}
+          onChange={e => setLogin(e.target.value)}
+        />
+        <input
+          className={styles.login__input}
+          type="password"
+          placeholder="Пароль"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+        />
+        <button className={styles.login__button} type="button" onClick={onClickButton}>
+          Войти
+        </button>
+      </div>
+    </Card>
+  );
 }
 
 export const Login = memo(LoginComponent);
