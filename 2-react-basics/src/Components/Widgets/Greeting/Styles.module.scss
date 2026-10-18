@@ -1,3 +1,6 @@
 .greeting {
-  
+  @include text_title();
+  margin-top: 50px;
+  text-align: center;
+  color: var(--accent-color);
 }

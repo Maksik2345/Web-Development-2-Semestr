@@ -1,12 +1,9 @@
+import { Greeting } from '@/Components/Widgets/Greeting';
 import '../Styles/index.scss';
-import styles from './Styles.module.scss';
+import '../Styles/variables.scss';
 
 function AppComponent() {
-  return (
-    <>
-      <h2 className={styles.title}>Hello React World!</h2>
-    </>
-  );
+  return <Greeting />;
 }
 
 export const App = AppComponent;
