@@ -1,4 +1,4 @@
-import { useState } from 'react';
+  import { useState } from 'react';
 
 export const UserProfile = ({ userId }: { userId: string }) => {
   const [user] = useState<{ id: string; name: string } | null>(null);
@@ -7,5 +7,12 @@ export const UserProfile = ({ userId }: { userId: string }) => {
   // Какой хук использовать здесь?
   // (выбери: useEffect или useLayoutEffect) и кратко объясни свою позицию
 
+  // Ответ: useEffect.
+  // Запрос к серверу — асинхронная операция: ответ придёт через неизвестное время,
+  // и ждать его, не показывая страницу, бессмысленно. useEffect выполняется после
+  // отрисовки и не блокирует её: пользователь сразу видит страницу (например, пустой
+  // блок или «Загрузка...»), а когда придут данные, компонент перерисуется.
+  // useLayoutEffect здесь только навредил бы: он выполняется синхронно до показа экрана,
+  // но дождаться ответа сервера всё равно не может, а отрисовку задержит.
   return <div>{user?.name}</div>;
 };
