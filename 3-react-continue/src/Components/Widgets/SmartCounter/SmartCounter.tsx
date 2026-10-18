@@ -1,5 +1,4 @@
 import { JSX, memo } from 'react';
-import cn from 'classnames';
 import styles from './Styles.module.scss';
 
 function SmartCounterComponent(): JSX.Element {

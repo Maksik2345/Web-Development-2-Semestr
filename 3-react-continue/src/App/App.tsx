@@ -1,4 +1,5 @@
 import { Card } from '@/Components/Layouts/Card';
+import { AutoFocusInput } from '@/Components/Widgets/AutoFocusInput';
 import { Login } from '@/Components/Widgets/Login';
 import { UserList } from '@/Components/Widgets/UserList';
 import { User } from '@/Models/User';
@@ -33,6 +34,7 @@ function AppComponent() {
 
       <UserList users={USERS} />
       <Login />
+      <AutoFocusInput />
     </>
   );
 }
