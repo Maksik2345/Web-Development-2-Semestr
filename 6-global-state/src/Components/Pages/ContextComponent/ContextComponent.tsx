@@ -1,11 +1,7 @@
 import { JSX, memo, useContext } from 'react';
+import { ROLE_NAMES } from '@/Constants/roles';
 import { UserContext } from '@/Contexts/UserContext';
 import styles from './Styles.module.scss';
-
-const ROLE_NAMES: Record<'admin' | 'user', string> = {
-  admin: 'Администратор',
-  user: 'Пользователь',
-};
 
 function ContextComponentComponent(): JSX.Element {
   const user = useContext(UserContext);

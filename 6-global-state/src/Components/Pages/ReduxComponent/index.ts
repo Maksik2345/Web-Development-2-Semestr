@@ -1,0 +1,1 @@
+export { ReduxComponent } from './ReduxComponent';

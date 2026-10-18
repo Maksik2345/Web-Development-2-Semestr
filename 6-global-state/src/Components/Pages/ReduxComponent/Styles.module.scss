@@ -1,0 +1,11 @@
+.reduxComponent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
