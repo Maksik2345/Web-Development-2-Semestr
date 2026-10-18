@@ -1,6 +1,14 @@
 import { Card } from '@/Components/Layouts/Card';
+import { UserList } from '@/Components/Widgets/UserList';
+import { User } from '@/Models/User';
 import '../Styles/index.scss';
 import '../Styles/variables.scss';
+
+const USERS: User[] = [
+  { id: 1, name: 'Иван Петров', age: 20, city: 'Екатеринбург' },
+  { id: 2, name: 'Мария Смирнова', age: 34, city: 'Москва' },
+  { id: 3, name: 'Алексей Кузнецов', age: 21, city: 'Казань' },
+];
 
 function AppComponent() {
   return (
@@ -19,8 +27,10 @@ function AppComponent() {
       </Card>
 
       <Card title="Картинка">
-        <img src="/avatar.png" alt="Пример изображения" />
+        <img src="/avatar.png" alt="Майк Вазовски" />
       </Card>
+
+      <UserList users={USERS} />
     </>
   );
 }
