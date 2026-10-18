@@ -1,4 +1,5 @@
 import { Greeting } from '@/Components/Widgets/Greeting';
+import { StudentProfile } from '@/Components/Widgets/StudentProfile';
 import { TaskCard } from '@/Components/Widgets/TaskCard';
 import { UserCard } from '@/Components/Widgets/UserCard';
 import '../Styles/index.scss';
@@ -16,6 +17,15 @@ function AppComponent() {
         comment="Не забыть сделать коммит после каждого задания"
       />
       <TaskCard title="Подготовиться к защите" subtitle="Повторить пропсы и interface" />
+      <StudentProfile
+        name="Максим"
+        surname="Самойленко"
+        age={19}
+        email="student@urfu.me"
+        status="Студент 2 курса ИРИТ-РТФ"
+        avatar="/avatar1.png"
+      />
+      <StudentProfile name="Майк" surname="Вазовски" age={21} status="Студент по обмену" avatar="/avatar.png" />
     </>
   );
 }
