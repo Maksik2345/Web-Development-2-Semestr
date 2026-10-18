@@ -5,6 +5,7 @@ import { Login } from '@/Components/Pages/Login';
 import { Main } from '@/Components/Pages/Main';
 import { NotFoundPage } from '@/Components/Pages/NotFoundPage';
 import { Table } from '@/Components/Pages/Table';
+import { User } from '@/Components/Pages/User';
 import '../Styles/index.scss';
 import './Styles.scss';
 
@@ -17,6 +18,7 @@ function AppComponent() {
           <Route index element={<Main />} />
           <Route path="/users" element={<Table />} />
           <Route path="/users/create" element={<AddUserPopup />} />
+          <Route path="/users/:userId" element={<User />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

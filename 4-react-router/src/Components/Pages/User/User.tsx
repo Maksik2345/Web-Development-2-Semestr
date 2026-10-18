@@ -1,8 +1,11 @@
 import { JSX, memo } from 'react';
+import { useParams } from 'react-router-dom';
 import styles from './Styles.module.scss';
 
 function UserComponent(): JSX.Element {
-  return <h2 className={styles.user}>{`User with id:`}</h2>;
+  const { userId } = useParams();
+
+  return <h2 className={styles.user}>{`User with id: ${userId}`}</h2>;
 }
 
 export const User = memo(UserComponent);
