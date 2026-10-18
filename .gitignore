@@ -1,0 +1,35 @@
+# --- Зависимости и сборка ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.js.map
+
+# Скомпилированный JS из TypeScript-задания
+1-typescript/**/*.js
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iml
+out/
+
+# --- Материалы курса (задания, лекции, презентации) ---
+materials/
+/Лекции/
+/*.txt
+*.pdf
+*.ppt
+*.pptx
+*.doc
+*.docx
+*.zip
+
+# --- Системные файлы ---
+.DS_Store
+Thumbs.db
+
+# --- Логи и переменные окружения ---
+*.log
+npm-debug.log*
+.env
+.env.*
